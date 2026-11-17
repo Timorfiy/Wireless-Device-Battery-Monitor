@@ -51,7 +51,7 @@ void PollKeychron(PollContext& ctx);  // Keychron mice, Nape Pro trackball (Link
 void PollLamzu(PollContext& ctx);     // LAMZU mice on vendor ids 373E / 37B0
 void PollEndgame(PollContext& ctx);   // Endgame Gear 4K mice (OP1w 4k, XM2w 4k) on the 4K dongle
 void PollWlmouse(PollContext& ctx);   // WLMouse Beast X family (VID 36A7)
-void PollNinjutso(PollContext& ctx);  // Sora V2 1K receiver (1915:AE1C)
+void PollNinjutso(PollContext& ctx);  // Sora V2 1K and Ten Air 2.4 GHz receivers
 void PollRongyuan(PollContext& ctx);  // Rongyuan receivers (Attack Shark, Ajazz keyboards, ...)
 void PollSonyInzone(PollContext& ctx);  // Sony INZONE H9 II / H5 / Buds
 void PollSonix(PollContext& ctx);     // SONiX keyboards on their 2.4 GHz dongle (AJAZZ AK820 MAX, AK980 V2, AULA F108 Pro)
