@@ -144,6 +144,7 @@ int main() {
     ctx = Poll({ TenReply(0x13, 1), TenReply(0x12, 14), TenReply(0x11, 0) }, ten);
     assert(queries == 3 && ctx.out.size() == 1 && ctx.IsClaimed(ten.vid, ten.pid));
     assert(ctx.out[0].percent == 14 && ctx.out[0].connected && !ctx.out[0].charging);
+    assert(ctx.out[0].graceSec == 180);
     assert(ctx.out[0].key == L"ninjutso:093A:EB01" && ctx.out[0].name == L"Ninjutso Ten Air");
     auto echo = TenReply(0x12, 0);
     echo[4] = 1;

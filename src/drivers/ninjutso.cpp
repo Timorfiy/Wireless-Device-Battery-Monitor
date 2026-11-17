@@ -72,6 +72,7 @@ void PollTenReceiver(PollContext& ctx) {
             s.percent = ReadTenValue(d, 0x12);
             if (s.percent < 0 || s.percent > 100) continue;
             s.charging = ReadTenValue(d, 0x11) > 0;
+            s.graceSec = 180;  // Keep the last reading dimmed across a missed receiver poll.
         }
         s.key = L"ninjutso:" + Hex4(vid) + L":" + Hex4(pid);
         s.name = HidProduct(*c);
